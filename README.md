@@ -3,7 +3,7 @@
 Upload, download, or list files/folders through Github Actions.
 
 ```
-- uses: keithweaver/aws-s3-github-action@v1.0.0
+- uses: pipedrive-actions/aws-s3-github-action@master
   with:
     command: cp
     source: ./local_file.txt
@@ -38,20 +38,20 @@ Upload, download, or list files/folders through Github Actions.
 You are specifying the tag or branch by using the `@` after the Action name. Below, it uses `v1.0.0` which is based on the tag.
 
 ```
-- uses: keithweaver/aws-s3-github-action@v1.0.0
+- uses: pipedrive-actions/aws-s3-github-action@master
   ...
 ```
 
 This uses the master branch:
 
 ```
-- uses: keithweaver/aws-s3-github-action@master
+- uses: pipedrive-actions/aws-s3-github-action@master
 ```
 
 This uses a feature branch called `dev-branch`:
 
 ```
-- uses: keithweaver/aws-s3-github-action@dev-branch
+- uses: pipedrive-actions/aws-s3-github-action@dev-branch
 ```
 
 It is recommended that you point to a specific version to avoid unexpected changes affecting your workflow.
@@ -103,7 +103,7 @@ Solution is [here](https://github.com/aws/aws-cli/issues/602#issuecomment-603877
 You need to a recursive flag for the `cp`. Looks like:
 
 ```
-- uses: keithweaver/aws-s3-github-action@v1.0.0
+- uses: pipedrive-actions/aws-s3-github-action@master
   name: Copy Folder
   with:
     command: cp
